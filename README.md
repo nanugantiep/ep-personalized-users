@@ -27,7 +27,6 @@ docker run -p 8081:8081 -e "JVM_ARGS=-Dserver.port=8081" hello-world-middle
 
 run java App
 java -jar build/libs/gs-rest-service-0.1.0.jar
-
 java -jar build/libs/ep-personalized-users-0.1.0.jar
 
 ==========================================================
