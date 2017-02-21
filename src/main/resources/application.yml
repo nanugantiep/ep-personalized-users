@@ -1,2 +1,11 @@
 server:  
-  port: 8085
+  port: 8090
+  
+eureka:
+  instance:
+    hostname: ${vipAddress:ep-personalized-users}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${discovery.service.url}
