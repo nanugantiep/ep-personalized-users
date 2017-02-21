@@ -13,7 +13,7 @@ public class UserController {
 	
 	HashMap<String, User> users = new HashMap<String, User>();
 	
-	 @RequestMapping("/GetUser")
+	@RequestMapping("/GetUser")
 	public User GetUserInfo()
 	{
 		User user1 = new User();
