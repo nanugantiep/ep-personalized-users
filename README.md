@@ -8,9 +8,11 @@ docker images --all
 docker remove
 
 gradle buildimage
+
 gradle clean build
 
 Registering to Eurika 
+
 gradle bootrun  - to run Eurika 
 java -Ddiscovery.service.url=http://localhost:8761/eureka -jar build/libs/ep-personalized-users-0.1.0.jar
 
