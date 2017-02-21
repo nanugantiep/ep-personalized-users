@@ -1,9 +1,10 @@
 server:  
   port: 8090
-  
+ 
 eureka:
   instance:
     hostname: ${vipAddress:ep-personalized-users}
+    app: personalizedUsers
   client:
     registerWithEureka: true
     fetchRegistry: true
