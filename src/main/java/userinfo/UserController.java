@@ -8,12 +8,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
+@Api("v1 - User Information ")
 public class UserController {
 	
 	HashMap<String, User> users = new HashMap<String, User>();
 	
-	@RequestMapping("/GetUser")
+	@ApiOperation(value = "Get by ID.")
+	@ApiResponses(value = { 
+			@ApiResponse(code = 200, message = "OK", response = User.class),
+			@ApiResponse(code = 400, message = "BAD_REQUEST"),
+			@ApiResponse(code = 401, message = "UNAUTHENTICATED"), 
+			@ApiResponse(code = 403, message = "UNAUTHORIZED"),
+			@ApiResponse(code = 404, message = "NOT_FOUND"),
+			@ApiResponse(code = 500, message = "INTERNAL SERVER ERROR") 
+		})
+	@RequestMapping(value="/GetUser",method = RequestMethod.GET )
 	public User GetUserInfo()
 	{
 		User user1 = new User();
