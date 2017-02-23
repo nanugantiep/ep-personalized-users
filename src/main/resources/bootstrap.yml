@@ -1,6 +1,6 @@
 spring: 
   application:
-    name: ${vipAddress:personalizedUsers}
+    name: ${vipAddress:personalization-service}
     
 swagger:
   title: UserInfoMiddleService REST APIs CI/CD Demo test
